@@ -1,0 +1,30 @@
+#题目四：输入某年某月某日，判断这一天是这一年的第几天？
+def runnian(year):#1.能被4整除,但不能被100整除;2.能被400整除;
+    if (year%4==0 and year%100!=0) or year%400==0:
+        print("闰年")
+        return day==366
+    else:
+        print("平年")
+        return day==365
+kk=[0,0,31,60,91,121,152,182,213,244,274,305,335]
+ss=[0,0,31,59,90,120,151,181,212,243,273,304,334]
+u=0
+def months(month):
+    global u
+    if (year % 4 == 0 and year % 100 != 0) or year % 400 == 0:
+        if month == 1:
+            u = day
+        else:
+            u = kk[month] + day
+    else:
+        if month == 1:
+            u = day
+        else:
+            u = ss[month] + day
+
+year=int(input("请输入年份："))
+month=eval(input("请输入月份（1-12）："))
+day=eval(input("请输入几号："))
+runnian(year)
+months(month)
+print(u)
