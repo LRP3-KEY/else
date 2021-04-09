@@ -1,0 +1,35 @@
+#第十一题：
+f1 = 1
+f2 = 1
+for i in range(1,22):
+    print ('%12ld %12ld' % (f1,f2), end=" ")
+    if (i % 3) == 0:
+        print ('')
+    f1 = f1 + f2
+    f2 = f1 + f2
+方法二：
+i=1
+sum=2
+list=[6,9,12]
+for i in range(3,13):
+    sum+=2
+    while i in list:
+        sum+=2    
+    print(f"第{i}个月有{sum}只")
+    i+=1
+#第十二题：判断101-200之间有多少个素数，并输出所有素数。
+#质数是指在大于1的自然数中，除了1和它本身以外不再有其他因数的自然数。
+for i in range(101,201):
+    for d in range(2,i-1):
+        if i%d==0:break
+    else:
+        print(f"这个是素数{i}")
+#方法二：
+f1 = 1
+f2 = 1
+for i in range(1,22):
+    print ('%12ld %12ld' % (f1,f2), end=" ")
+    if (i % 3) == 0:
+        print ('')
+    f1 = f1 + f2
+    f2 = f1 + f2
