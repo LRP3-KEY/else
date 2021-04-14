@@ -76,6 +76,32 @@ elif a>=60:
     print("等级为B")
 else:
     print("等级为C")
+#第十六题：输出指定格式的日期。
+import calendar
+cal=calendar.month(2020,7)
+print(cal)
+#方法二：
+import datetime
+ 
+if __name__ == '__main__':
+ 
+    # 输出今日日期，格式为 dd/mm/yyyy。更多选项可以查看 strftime() 方法
+    print(datetime.date.today().strftime('%d/%m/%Y'))
+ 
+    # 创建日期对象
+    miyazakiBirthDate = datetime.date(1941, 1, 5)
+ 
+    print(miyazakiBirthDate.strftime('%d/%m/%Y'))
+ 
+    # 日期算术运算
+    miyazakiBirthNextDay = miyazakiBirthDate + datetime.timedelta(days=1)
+ 
+    print(miyazakiBirthNextDay.strftime('%d/%m/%Y'))
+ 
+    # 日期替换
+    miyazakiFirstBirthday = miyazakiBirthDate.replace(year=miyazakiBirthDate.year + 1)
+ 
+    print(miyazakiFirstBirthday.strftime('%d/%m/%Y'))
 #第十七题：输入一行字符，分别统计出其中英文字母、空格、数字和其它字符的个数
 import string
 s = input('请输入一个字符串:\n')
