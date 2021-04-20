@@ -151,3 +151,15 @@ for j in range(2, 1001):
             stdout.write(str(k[i]))
             stdout.write(' ')
         print(k[n])
+#第二十题：一球从100米高度自由落下，每次落地后反跳回原高度的一半；再落下，求它在第10次落地时，共经过多少米？第10次反弹多高？
+a=100
+i=1
+c=a
+while i<11:
+    a=a/2
+    if i>=2:
+        c+=a*4
+    i+=1
+print(f"10次后反弹{a}高,共经过{c}米")
+tour = []
+height = []
