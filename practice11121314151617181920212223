@@ -235,3 +235,17 @@ while i<21:
     b=a-b
     i+=1
 print(sum)
+#方法二：
+d=2
+f=1
+k=[]
+v=0
+for i in range(1,21):
+    o=d/f
+    k.append(o)
+    t=d
+    d=d+f
+    f=t
+for g in k:
+    v+=g
+print(v)
