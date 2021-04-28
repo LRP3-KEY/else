@@ -17,3 +17,10 @@ def op(x):
     return r
 s = sum(map(op,l))
 print ('1! + 2! + 3! + ... + 20! = %d' % s)
+#第二十六题：利用递归方法求5!。
+def digui(x):
+    if x==0:
+        x==1
+    else:
+        return x*digui(x-1)
+print(digui(5))
