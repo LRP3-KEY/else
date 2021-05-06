@@ -44,3 +44,20 @@ def xx(x):
 print(xx(5))
 
 output(s,l)
+#第二十九题：给一个不多于5位的正整数，要求：一、求它是几位数，二、逆序打印出各位数字。
+x=int(input("请输入数字："))
+a=x//10000
+b=x%10000//1000
+c=x%1000//100
+d=x%100//10
+e=x%10
+if a!=0:
+    print(f"这是个五位数:{e}{d}{c}{b}{a}")
+elif b!=0:
+    print(f"这是个四位数:{e}{d}{c}{b}")
+elif c!=0:
+    print(f"这是个三位数:{e}{d}{c}")
+elif d!=0:
+    print(f"这是个两位数:{e}{d}")
+else:
+    print(f"这是个个位数:{e}")
